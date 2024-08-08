@@ -10,9 +10,21 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 - Sends a reminder to recall your totems if they are too far away
 
 ## Screenshots & Gifs
-<img src="https://i.imgur.com/CaEZPnj.png">
-![Recall](https://i.imgur.com/HehbtNh.mp4)
-[![Totemic Recall](https://i.imgur.com/8tXhnkY.png)](https://i.imgur.com/HehbtNh.mp4)
+- Recall warning at 45 yards
+
+<img src="https://i.imgur.com/CaEZPnj.png" width = 200><br><br>
+
+- Totemic Recall Cast
+
+<img src="https://i.imgur.com/HehbtNh.gif" width = 200 ><br><br>
+
+- Timers turn red when you out range the totems
+
+<img src="https://imgur.com/S2Q6A5s.gif" width = 200><br><br>
+
+- Totem being destroyed
+
+<img src="https://imgur.com/PItpzSQ.gif" width = 200> <br><br>
 
 ## Installation
 ** Make sure you have [pfUI](https://gitlab.com/shagu/pfUI) downloaded and installed first **
