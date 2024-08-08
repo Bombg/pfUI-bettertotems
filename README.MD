@@ -3,7 +3,7 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 
 ## Features
 - Looks exactly like pfUI's default totem timer
-- Totems timers dissappear when you cast Totemic Recall (Turtle WoW spell)
+- Totems timers disappear when you cast Totemic Recall (Turtle WoW spell)
 - Totem timer for an individual totem is cleared if that totem is destroyed
 - Totem timer turns red if you out range a totem
     - Is more accurate if you use [SuperWoW](https://github.com/balakethelock/SuperWoW)
