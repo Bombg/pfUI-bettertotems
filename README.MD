@@ -34,6 +34,7 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 3. Rename the unzipped folder to "pfUI-bettertotems"
 4. Copy or cut the now renamed "pfUI-bettertotems" and paste it into Interface\AddOns
 5. Restart World of Warcraft
+6. Disable pfUI's default totem module
 
 ## Credit
 I'm new to modding WoW, so I learned from other addons. Most of the code in this addon isn't mine
