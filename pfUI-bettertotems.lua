@@ -52,7 +52,6 @@ pfUI:RegisterModule("bettertotems", "vanilla:tbc", function ()
       local count = 0
       for i = 1, MAX_TOTEMS do
         local active, name, start, duration, icon, unitId, x, y = GetBetterTotemInfo(i)
-        print(name)
   
         if active and icon and icon ~= "" then
           count = count + 1
