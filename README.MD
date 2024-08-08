@@ -27,6 +27,7 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 
 ## Installation
 ** This addon Requires [SuperWoW](https://github.com/balakethelock/SuperWoW) **
+
 ** Make sure you have [pfUI](https://gitlab.com/shagu/pfUI) downloaded and installed first **
 1. Download Better Totems
 2. Unzip
