@@ -79,7 +79,7 @@ GetBetterTotemInfo = function(id)
     return nil
   end
 
-  return 1, active[id].name, active[id].start, active[id].duration, active[id].icon, active[id].unitId, active[id].x,  active[id].y
+  return 1, active[id].name, active[id].start, active[id].duration, active[id].icon, active[id].unitId
 end
 
 if class ~= "SHAMAN" then return end
@@ -110,7 +110,6 @@ libtotem:SetScript("OnEvent", function()
       active[queue.slot].duration = queue.duration
       active[queue.slot].icon = queue.icon
       active[queue.slot].start = GetTime()
-      active[queue.slot].x,active[queue.slot].y = GetPlayerMapPosition("player")
       queue.slot = nil
       queue.name = nil
     end
@@ -125,8 +124,6 @@ libtotem.Clean = function(self, slot)
   active[slot].duration = nil
   active[slot].icon = nil
   active[slot].unitId = nil
-  active[slot].x = nil
-  active[slot].y = nil
 end
 
 libtotem.CheckAddQueue = function(self, name, rank, icon)

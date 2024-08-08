@@ -26,7 +26,7 @@ pfUI:RegisterModule("bettertotems", "vanilla:tbc", function ()
   
     totems.OnEnter = function(self)
       if not this.id then return end
-      local active, name, start, duration, icon, unitId, x, y = GetBetterTotemInfo(this.id)
+      local active, name, start, duration, icon, unitId = GetBetterTotemInfo(this.id)
       local color = slots[this.id]
       GameTooltip:SetOwner(this, "ANCHOR_LEFT")
       GameTooltip:SetText(name, color.r+.2, color.g+.2, color.b+.2)
@@ -40,7 +40,7 @@ pfUI:RegisterModule("bettertotems", "vanilla:tbc", function ()
     totems.OnClick = function(self)
       if pfUI.client <= 11200 and this.id and arg1 and arg1 == "LeftButton" then
         -- Try to recast totem on left click in vanilla
-        local active, name, start, duration, icon, unitId, x, y = GetBetterTotemInfo(this.id)
+        local active, name, start, duration, icon, unitId = GetBetterTotemInfo(this.id)
         if name then CastSpellByName(name) end
       elseif pfUI.client > 11200 and this.id and arg1 and arg1 == "RightButton" then
         -- Try to cancel totem on right click in tbc+
@@ -51,7 +51,7 @@ pfUI:RegisterModule("bettertotems", "vanilla:tbc", function ()
     totems.RefreshList = function(self)
       local count = 0
       for i = 1, MAX_TOTEMS do
-        local active, name, start, duration, icon, unitId, x, y = GetBetterTotemInfo(i)
+        local active, name, start, duration, icon, unitId = GetBetterTotemInfo(i)
   
         if active and icon and icon ~= "" then
           count = count + 1
@@ -65,10 +65,10 @@ pfUI:RegisterModule("bettertotems", "vanilla:tbc", function ()
           local _,_,_,_,rank = GetTalentInfo(3,8)
           local totemicMastery = rank == 1
   
-          local inRange =  LibrangeCalc:InRange(unitId,totemicMastery and 30 or 20,nil,x,y)
+          local inRange =  LibrangeCalc:InRange(unitId,totemicMastery and 30 or 20)
           if not inRange and UnitExists(unitId) then
             self.bar[count].icon:SetVertexColor(1,0,0,0.7)
-            local notWarnRange = unitId and UnitExists(unitId) and LibrangeCalc:InRange(unitId,45,nil,x,y)
+            local notWarnRange = unitId and UnitExists(unitId) and LibrangeCalc:InRange(unitId,45)
             if not notWarnRange then
               UIErrorsFrame:AddMessage("Totems Out of Range. Recall?",1.0,0.0,0.0)
               PlaySound("igPVPUpdate", "master")

@@ -11,7 +11,7 @@ function LibrangeCalc:distance(x1,y1,z1,x2,y2,z2)
   return math.sqrt(dx^2 + dy^2 + dz^2)
 end
 
-function LibrangeCalc:InRange(unit, range, unit2,x,y)
+function LibrangeCalc:InRange(unit, range, unit2)
   -- Determine the source based on the unit2 parameter
   local source = unit2 or "player"
   local distance
