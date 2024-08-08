@@ -1,0 +1,12 @@
+## Interface: 11200
+## Title: |cff33ffccpf|cffffffffUI|cffaaaaaa [Better Totems]
+## Author: Bombg
+## Notes: Improved version of pfUI's totem timers
+## Version: 1.0
+## Dependencies: pfUI
+
+# main
+libbettertotem.lua
+librangecalc.lua
+pfUI-bettertotems-config.lua
+pfUI-bettertotems.lua
