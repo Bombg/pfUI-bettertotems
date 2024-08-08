@@ -267,5 +267,5 @@ end
 function GetMapFileName()
 	SetMapToCurrentZone()
 	local mapFileName, _, _ = GetMapInfo()
-  return mapFileName
+	return mapFileName
 end
