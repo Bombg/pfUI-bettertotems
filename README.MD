@@ -6,7 +6,6 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 - Totem timers disappear when you cast Totemic Recall (Turtle WoW spell)
 - Totem timer for an individual totem is cleared if that totem is destroyed
 - Totem timer turns red if you out range a totem
-    - Is more accurate if you use [SuperWoW](https://github.com/balakethelock/SuperWoW)
 - Sends a reminder to recall your totems if they are too far away
 
 ## Screenshots & Gifs
@@ -27,6 +26,7 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 <img src="https://imgur.com/PItpzSQ.gif" width = 200> <br><br>
 
 ## Installation
+** This addon Requires [SuperWoW](https://github.com/balakethelock/SuperWoW) **
 ** Make sure you have [pfUI](https://gitlab.com/shagu/pfUI) downloaded and installed first **
 1. Download Better Totems
 2. Unzip
@@ -38,4 +38,3 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 I'm new to modding WoW, so I learned from other addons. Most of the code in this addon isn't mine
 - pfUI's original totem module, it's mostly the same code.
 - https://github.com/MarcelineVQ/Twister  - Used the superwow range calculations
-- https://github.com/gnwl/NotGrid/ - Used ranged calcuations using map positions
