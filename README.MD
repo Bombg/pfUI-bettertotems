@@ -14,9 +14,9 @@ Looks and works very similarly to pfUI's default totem module, but with extra fe
 
 <img src="https://i.imgur.com/CaEZPnj.png" width = 200><br><br>
 
-- Totemic Recall Cast
+- Totemic Recall Cast removing timers
 
-<img src="https://i.imgur.com/HehbtNh.gif" width = 200 ><br><br>
+<img src="https://imgur.com/8Gr7BNp.gif" width = 200 ><br><br>
 
 - Timers turn red when you out range the totems
 
