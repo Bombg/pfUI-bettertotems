@@ -1,3 +1,7 @@
+-- Most of the code from this file is from
+-- https://github.com/gnwl/NotGrid/
+-- and
+-- https://github.com/MarcelineVQ/Twister
 local Default = {
 	["Alterac"] = {x = 2800.0003, y = 1866.6667},
 	["AlteracValley"] = {x = 4237.5, y = 2825},
@@ -255,7 +259,7 @@ function GetWorldDistance(ux,uy) -- Thanks to Rhena/Renew/Astrolabe
 	local px, py, distance
   local mapSizes = GetMapSizes()
   local mapFileName = GetMapFileName()
-	px, py = GetPlayerMapPosition("player") -- gets position data in units of percentage of map size
+	px, py = GetPlayerMapPosition("player") 
 	if mapFileName and mapSizes[mapFileName] and px ~= 0 and ux ~= 0 then -- we check player and unit against absolute 0 as returning such is likely an out of bounds map error. if such is the case we'll return a nil distance
 		local xdelta = (px - ux)*mapSizes[mapFileName].x -- (px-ux) gives distance in percentage units, multiply by mapsize to convert to wow units.
 		local ydelta = (py - uy)*mapSizes[mapFileName].y
