@@ -4,7 +4,6 @@ local btcFrame = CreateFrame("Frame")
 btcFrame:RegisterEvent("VARIABLES_LOADED")
 btcFrame:SetScript("OnEvent", function ()
   if event == "VARIABLES_LOADED" then
-    print("loaded vars hell yeah")
     InitializeDefaultValues()
     AskToDisable()
     CreateGuiConfigEntries()
