@@ -70,7 +70,7 @@ pfUI:RegisterModule("bettertotems", "vanilla:tbc", function ()
             self.bar[count].icon:SetVertexColor(1,0,0,0.7)
             local warnRange = pfUI_config.bettertotems.recallRange or 45
             warnRange = tonumber(warnRange)
-            local toWarn = pfUI_config.bettertotems.recall or 1
+            local toWarn = pfUI_config.bettertotems.recall or "1"
             local notWarnRange = unitId and UnitExists(unitId) and LibrangeCalc:InRange(unitId,warnRange)
             if not notWarnRange and toWarn == "1" then
               UIErrorsFrame:AddMessage("Totems Out of Range. Recall?",1.0,0.0,0.0)

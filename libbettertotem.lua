@@ -3,6 +3,7 @@ setfenv(1, pfUI:GetEnvironment())
 
 -- return instantly if we're not on a vanilla client
 if pfUI.client > 11200 then return end
+if LibBetterTotem then return end
 
 
 MAX_TOTEMS       = MAX_TOTEMS       or 4
@@ -151,9 +152,11 @@ end
 
 function DoesTableContain(table, contains)
   local index = nil
-  for k, v in pairs(table) do
-    if string.find(contains, k) then 
-      index = k
+  if table and contains and type(table) == "table" then
+    for k, v in pairs(table) do
+      if string.find(contains, k) then 
+        index = k
+      end
     end
   end
   return index
@@ -194,6 +197,16 @@ function GetRemainingDuration(id)
     timeLeft = active[id].start + active[id].duration - GetTime()
   end
   return timeLeft
+end
+
+function IsTableEmpty (table)
+  local isEmpty = true
+  if type(table) == "table" then 
+      for _, _ in pairs(table) do
+          isEmpty = false
+      end
+  end
+  return isEmpty
 end
 
 LibBetterTotem = libtotem
