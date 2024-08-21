@@ -99,7 +99,7 @@ libtotem:SetScript("OnEvent", function()
     local unitName = UnitName(unitId)
   
     if string.find(unitName, "Totem") and UnitName(unitId .. "owner") == UnitName("player") then
-      local key = DoesTableContain(nameIconMap,unitName)
+      local key = GetKeyIndexIfExists(nameIconMap,unitName)
       if key then
         local icon = nameIconMap[key]
         active[GetTotemSlot(icon)].unitId = unitId
@@ -150,7 +150,7 @@ libtotem.CheckAddQueue = function(self, name, rank, icon)
   return nil
 end
 
-function DoesTableContain(table, contains)
+function GetKeyIndexIfExists(table, contains)
   local index = nil
   if table and contains and type(table) == "table" then
     for k, v in pairs(table) do
